@@ -1,53 +1,89 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Light grey background */
     margin: 0;
     padding: 0;
 }
 
+/* Form Styles */
 form {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 #search {
-    padding: 10px;
-    width: 300px;
+    padding: 12px;
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px; /* Width for the search input */
+    transition: border-color 0.3s ease;
 }
 
-button {
-    padding: 10px;
-    margin-left: 10px;
-    cursor: pointer;
+#search:focus {
+    border-color: #007bff; /* Blue border on focus */
 }
 
+/* Main Styles */
 #main {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+    padding: 20px;
 }
 
+/* Card Styles */
 .card {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    padding: 30px; /* Increased padding for more space inside the card */
     margin: 10px;
-    text-align: center;
-    width: 250px;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Increased maximum width for the card */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items to the center vertically */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow */
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
+    border-radius: 50%; /* Circular avatar */
+    border: 2px solid #007bff; /* Blue border for the avatar */
+    margin-right: 30px; /* Increased space between image and text */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
 }
 
 .card h2 {
-    margin: 10px 0;
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Larger font size for name */
+    color: #343a40; /* Dark grey color */
 }
 
 .card p {
-    margin: 5px 0;
+    margin: 10px 0; /* Increased vertical spacing between paragraphs */
+    color: #495057; /* Medium grey color */
+    font-size: 0.95rem; /* Slightly smaller font size for additional info */
+}
+
+.card p strong {
+    color: #007bff; /* Blue color for strong text */
 }
